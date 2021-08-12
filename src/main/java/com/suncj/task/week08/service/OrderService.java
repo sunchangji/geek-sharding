@@ -21,15 +21,13 @@ public class OrderService {
         orderMapper.create(entity);
     }
 
-    public void batchCreate(List<OrderEntity> list){
-        orderMapper.batchCreate(list);
+    public int delete(Long userId,Long orderId){
+        return orderMapper.delete(userId,orderId);
     }
 
-    public int update(String productName,Long orderId){
-        return orderMapper.update(productName,orderId);
+    public int update(Long userId,Long orderId){
+        return orderMapper.update(userId+"ps",orderId,userId);
     }
 
-    public static void main(String[] args) {
-        System.out.println(1628785556229L%16);
-    }
+
 }

@@ -59,28 +59,10 @@
     <update id="update">
         update
         <include refid="tb"/>
-        set product_name=#{productName} where order_id=#{orderId}
+        set product_name=#{productName} where order_id=#{orderId} and user_id=#{userId}
     </update>
 
-    <insert id="batchCreate">
-        insert into
-        <include refid="tb"/>
-        (<include refid="cols_exclude_id"/>)
-        values
-        <foreach collection="list" item="item" index="index" separator=",">
-            (#{item.orderId},
-            #{item.userId},
-            #{item.productId},
-            #{item.productName},
-            #{item.buyNum},
-            #{item.productPrice},
-            #{item.averageCost},
-            #{item.feeMoney},
-            #{item.warehouseId},
-            #{item.createTime},
-            #{item.updateTime}
-            )
-        </foreach>
-
-    </insert>
+    <delete id="delete">
+        delete from <include refid="tb"/> where order_id=#{orderId} and user_id=#{userId}
+    </delete>
 </mapper>

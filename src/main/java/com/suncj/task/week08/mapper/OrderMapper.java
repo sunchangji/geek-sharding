@@ -13,7 +13,7 @@ public interface OrderMapper {
 
     void create(OrderEntity entity);
 
-    int update(@Param("productName") String productName, @Param("orderId")Long orderId);
+    int update(@Param("productName") String productName, @Param("orderId")Long orderId,@Param("userId")Long userId);
 
-    void batchCreate(List<OrderEntity> list);
+    int delete(@Param("userId")Long userId,@Param("orderId")Long orderId);
 }

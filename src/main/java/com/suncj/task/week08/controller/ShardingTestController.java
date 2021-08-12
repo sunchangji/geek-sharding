@@ -29,9 +29,16 @@ public class ShardingTestController {
     }
 
     @RequestMapping("update")
-    public int create(String productName,long orderId){
-        return orderService.update(productName,orderId);
+    public int create(Long userId,long orderId){
+        return orderService.update(userId,orderId);
     }
+
+    @RequestMapping("delete")
+    public int delete(Long userId,long orderId){
+        return orderService.delete(userId,orderId);
+    }
+
+
 
     private OrderEntity buildEntity(Long userId){
         OrderEntity entity = new OrderEntity();
