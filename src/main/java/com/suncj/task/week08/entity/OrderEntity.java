@@ -6,11 +6,11 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-public class TradeOrderDetailEntity {
+public class OrderEntity {
 
-    private long id;
+    private long orderId;
 
-    private String orderId;
+    private long userId;
 
     private long productId;
 

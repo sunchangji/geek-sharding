@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfigurati
  * @Created by sunchangji
  */
 @SpringBootApplication(exclude = JtaAutoConfiguration.class)
-@MapperScan(basePackages = "com.suncj.geektask.week07.mapper")
+@MapperScan(basePackages = "com.suncj.task.week08.mapper")
 
 public class GeekTaskApplication {
     public static void main(String[] args) {
