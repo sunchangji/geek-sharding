@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sharding="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
-    
 
+    <!-- 开启自动扫描 @ShardingTransactionType 注解，使用 Spring 原生的 AOP 在类和方法上进行增强 -->
+    <sharding:tx-type-annotation-driven />
 </beans>
